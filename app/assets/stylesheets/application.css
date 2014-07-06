@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+@import "reset.css.scss";
+@import "main.css.scss";
+@import "announcements.css.scss";
