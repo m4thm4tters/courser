@@ -15,5 +15,6 @@
  */
 
 @import "reset.css.scss";
+@import "active_admin.css.scss";
 @import "main.css.scss";
 @import "announcements.css.scss";
