@@ -194,6 +194,7 @@ DEPENDENCIES
   formtastic!
   jbuilder (~> 2.0)
   jquery-rails
+  jquery-ui-rails
   pg
   polyamorous!
   rails (= 4.1.1)
