@@ -1,0 +1,16 @@
+<% content_for :title, 'Courses' %>
+<%= render 'shared/main_header' %>
+<div id="wrapper">
+  <%= render 'shared/main_nav' %>
+  <div id="main">
+    <div id="content">
+      <h1>Courses</h1>
+      <ul> 
+        <% @courses.each do |course| %>
+        <li><%= link_to(course.title + ": section " + course.section,course_path(course)) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>
