@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :assignments
+
+  resources :announcements
+
+  resources :courses
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'home/index'
