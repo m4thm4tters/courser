@@ -1,3 +1,166 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html {
+	background:#45473f;
+	overflow-x: hidden;
+}
+
+body {
+	width: 80%;
+	margin: 20px auto;
+	background: #fff;
+	font-family: Verdana, Geneva, sans-serif;
+	min-width: 800px;
+	z-index: -5;
+}
+
+#lines {
+    background-size: 30px 30px;    
+    background-image:repeating-linear-gradient(0deg, #fff, #fff 1px, transparent 1px, transparent 40px),repeating-linear-gradient(-90deg, #fff, #fff 1px, transparent 1px, transparent 40px);
+    height:100%;
+    width:100%;
+    opacity:0.14;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-4;
+}
+
+#myheader,
+#myfooter {
+	overflow:hidden;
+	zoom:1;
+	color:white;
+	background:#387cfc;
+	padding:20px 30px 20px 30px;
+}
+
+#myheader h1 {
+	color:white;
+	font-size:30px;
+}
+
+#myfooter a {
+	color:white;
+	text-decoration:none;
+}
+
+#sidebar {
+  	float:left;
+	width:200px;
+	padding-top:20px;
+}
+
+#nav {
+	float:left;
+	width:200px;
+	font-size:15px;
+}
+
+#nav a {
+	display:block;
+	color:black;
+	padding: 2px 0px 2px 30px;
+	text-decoration:none;
+}
+
+#nav a:hover {
+	background-color:white;
+}
+
+#nav ul {
+}
+
+#nav li {
+	line-height: 20px;
+}
+
+#main {
+	float:left;
+}
+
+#content {
+	float: left;
+	padding-left: 30px;
+	padding-top: 20px;
+	max-width: 60%;
+	min-width: 500px;
+}
+
+#content a {
+	color: black;
+}
+
+#content a:hover {
+	text-decoration: underline;
+}
+
+#content li {
+	line-height: 20px;
+}
+
+#content table {
+	margin-bottom: 20px;
+}
+
+#content th, td {
+    border: 2px solid #abc5f5;
+    padding: 4px 8px 3px 8px;
+}
+
+#content th {
+	background-color: #abc5f5;
+	padding-top: 6px;
+    padding-bottom: 5px;
+}
+
+#content h1 {
+	color: #387cfc;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+/* step-1 :: background colors */
+#sidebar {
+	margin-left:-200px;
+	position:relative;/* ie 6 */
+}
+
+#wrapper {
+	display:inline-block;
+	border-left:200px solid #abc5f5;
+	position:relative; /* ie 6 */
+}
+
+/* step-2 :: killing the gap under #wrapper and creating the vertical border */
+#wrapper {
+  vertical-align:bottom;
+}
+
+#sidebar {
+  margin-right:-1px;
+  border-right:1px solid #888;
+}
+
+#main {
+  border-left:1px solid #888;
+}
+
+/* step-3 :: making things look nice */
+html {
+  height:auto;
+}
+
+body {
+  border:1px solid #efefef;
+}
+
+#myheader,
+#main,
+#sidebar,
+#myfooter {
+  padding-bottom:30px;
+}
