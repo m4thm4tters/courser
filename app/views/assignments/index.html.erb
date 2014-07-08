@@ -1,0 +1,25 @@
+<% content_for :title, @course.title %>
+<%= render 'shared/header' %>
+
+<div id="wrapper">
+    <%= render 'shared/nav' %>
+    <div id="main">
+      <div id="content">
+          <h1>Assignments</h1>
+          <table>
+            <tr>
+              <th>Due Date</th>
+              <th>Assignment</th>
+            </tr>
+            <% @assignments.each do |assignment| %>
+              <tr>
+                <td><%= assignment.start %></td>
+                <td><%= assignment.content %></td>
+              </tr>
+            <% end %>
+          </table>
+      </div>
+    </div>
+</div>
+
+<%= render 'shared/footer' %>
