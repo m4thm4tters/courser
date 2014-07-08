@@ -1,8 +1,8 @@
 <div id="sidebar">
     <div id="nav">
         <ul>
-        	<li>link_to 'Home', section_path(@section) %></li>
-        	<li>link_to 'Assignments', assignments_path(:id => @section.id)</li>
+        	<li><%= link_to 'Home', course_path(@course) %></li>
+        	<li><%= link_to 'Assignments', assignments_path(:id => @course.id) %></li>
         	<li><a href='#'>Calender</a></li>
         	<li><a href='#'>Lecture Notes</a></li>
         	<li><a href='#'>Course Documents</a></li>
