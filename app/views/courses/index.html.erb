@@ -1,10 +1,9 @@
 <% content_for :title, 'Courses' %>
 <%= render 'shared/main_header' %>
-<div id="wrapper">
-  <%= render 'shared/main_nav' %>
-  <div id="main">
-    <div id="content">
-      <h1>Courses</h1>
+<%= render 'shared/main_nav' %>
+  <div class="container">
+    <div class="col-lg-12">
+      <h2>Current Teaching</h2>
       <ul> 
         <% @courses.each do |course| %>
         <li><%= link_to(course.title + ": section " + course.section,course_path(course)) %></li>
@@ -12,5 +11,3 @@
       </ul>
     </div>
   </div>
-</div>
-<%= render 'shared/footer' %>

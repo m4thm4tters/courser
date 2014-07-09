@@ -6,5 +6,6 @@ class CoursesController < ApplicationController
   def show
   	@announcements = Announcement.all
 	@course = Course.find(params[:id])
+	@instructor = Instructor.find_by_id(@course.instructor_id)
   end
 end

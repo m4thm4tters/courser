@@ -1,11 +1,22 @@
-<div id="sidebar">
-    <div id="nav">
-        <ul>
+<div class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
         	<li><%= link_to 'Home', course_path(@course) %></li>
         	<li><%= link_to 'Assignments', assignments_path(:id => @course.id) %></li>
         	<li><a href='#'>Calender</a></li>
         	<li><a href='#'>Lecture Notes</a></li>
         	<li><a href='#'>Course Documents</a></li>
-        </ul>
-	</div>
+      </ul>
+      <p class="navbar-text pull-right"><a href="/admin">Admin</a></p>
+    </div><!--/.nav-collapse -->
+  </div>
 </div>

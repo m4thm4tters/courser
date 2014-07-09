@@ -1,11 +1,19 @@
 <% content_for :title, 'J. Keller' %>
 <%= render 'shared/main_header' %>
-<div id="wrapper">
-	<%= render 'shared/main_nav' %>
-  <div id="main">
-  	<div id="content">
-      	
-  	</div>
-  </div>
+<%= render 'shared/main_nav' %>
+<div class="container">
+	<div class="col-xs-6">
+		<h2>Contact</h2>
+		<table class="table">
+			<tr>
+				<th>Office</th><th>W-XXX Olmstedd Bldg.</th>
+			</tr>
+			<tr>
+				<th>Email</th><th><a href="mailto:jck26@psu.edu">jck26@psu.edu</a></th>
+			</tr>
+			<tr>
+				<th>Phone</th><th>1 (717) XXX - XXXX</th>
+			</tr>
+		</table>
+	</div>
 </div>
-<%= render 'shared/footer' %>
