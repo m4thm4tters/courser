@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :lectures
+
   resources :assignments
 
   resources :announcements
 
   resources :courses
+
+  resources :events
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

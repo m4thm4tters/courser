@@ -12,16 +12,27 @@
  *
  *= require_tree .
  *= require_self
+ *= require fullcalendar
  */
+
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
 
 /* logo */
 
 .brand
 {
   float: left;
+}
+
+/* Calendar */
+
+#calendar a {
+	color: white;
 }
 
 /* Custom Navigation */

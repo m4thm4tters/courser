@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707225704) do
+ActiveRecord::Schema.define(version: 20140710005257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,20 +52,20 @@ ActiveRecord::Schema.define(version: 20140707225704) do
   create_table "announcements", force: true do |t|
     t.string   "title"
     t.string   "content"
-    t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "course_id"
+    t.date     "date"
   end
 
   create_table "assignments", force: true do |t|
     t.string   "title"
     t.string   "content"
-    t.string   "start"
-    t.string   "due"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "course_id"
+    t.date     "start"
+    t.date     "due"
   end
 
   create_table "courses", force: true do |t|
@@ -80,10 +80,27 @@ ActiveRecord::Schema.define(version: 20140707225704) do
 
   add_index "courses", ["instructor_id"], name: "index_instructor_id", using: :btree
 
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "course_id"
+  end
+
   create_table "instructors", force: true do |t|
     t.string   "first"
     t.string   "last"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lectures", force: true do |t|
+    t.string   "title"
+    t.string   "section"
+    t.date     "date"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

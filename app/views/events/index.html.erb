@@ -1,0 +1,14 @@
+<%= javascript_tag do %>
+  id = "<%= @course.id.to_s %>";
+<% end %>
+<% content_for :title, @course.title %>
+<%= render 'shared/header' %>
+<%= render 'shared/nav' %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Course Schedule</h2>
+      <div id="calendar"></div>
+    </div>
+  <div> 
+</div>

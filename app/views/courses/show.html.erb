@@ -2,6 +2,7 @@
 <%= render 'shared/header' %>
 <%= render 'shared/nav' %>
 <div id="container">
+	<div class="row">
     	<div class="col-lg-6">
         	<h2>Course Info</h2>
 	    	<table class="table">
@@ -36,12 +37,14 @@
 	    	<% @course.announcements.each do |announcement| %>
           	<div id="panels" class="panel panel-primary">
           		<div class="panel-heading">
-	          		<%= announcement.date + " - " + announcement.title %>
+          			<%= announcement.date.to_formatted_s(:long_ordinal)%>
 	          	</div>
- 		        <p><%= announcement.content %></p>
+
+ 		        <p><strong><%= announcement.title %></strong><br/><%= announcement.content %></p>
           	</div>
           	<% end %>
       	</div>
+    </div>
 </div>
 
 

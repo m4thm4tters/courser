@@ -1,26 +1,30 @@
 <% content_for :title, @course.title %>
 <%= render 'shared/header' %>
 <%= render 'shared/nav' %>
-    <div class="container">
-      <div class="col-lg-12">
-          <h2>Assignments</h2>
-          <table class="table">
-            <thead>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+        <h2>Assignments</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th class="col-xs-2">Date Assigned</th>
+            <th class="col-xs-2">Date Due</th>
+            <th class="col-xs-2">Name</th>
+            <th class="col-xs-6 ">Description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @assignments.each do |assignment| %>
             <tr>
-              <th class="col-xs-2">Date Assigned</th>
-              <th class="col-xs-2">Date Due</th>
-              <th class="col-xs-8 ">Description</th>
+              <td><%= assignment.start.to_s %></td>
+              <td><%= assignment.due.to_s %></td>
+              <td><%= assignment.title %></td>
+              <td><%= assignment.content %></td>
             </tr>
-            </thead>
-            <tbody>
-            <% @assignments.each do |assignment| %>
-              <tr>
-                <td><%= assignment.start %></td>
-                <td><%= assignment.due %></td>
-                <td><%= assignment.content %></td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
-      </div>
+          <% end %>
+          </tbody>
+        </table>
     </div>
+  </div>  
+</div>

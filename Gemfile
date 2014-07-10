@@ -13,6 +13,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'autoprefixer-rails'
 
+# Use full-calendar
+gem 'fullcalendar-rails'
+
 
 
 

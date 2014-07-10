@@ -12,8 +12,8 @@
       <ul class="nav navbar-nav">
         	<li><%= link_to 'Home', course_path(@course) %></li>
         	<li><%= link_to 'Assignments', assignments_path(:id => @course.id) %></li>
-        	<li><a href='#'>Calender</a></li>
-        	<li><a href='#'>Lecture Notes</a></li>
+        	<li><%= link_to 'Calendar', events_path(:id => @course.id) %></li>
+        	<li><%= link_to 'Lecture Notes', lectures_path(:id => @course.id) %></li>
         	<li><a href='#'>Course Documents</a></li>
       </ul>
       <p class="navbar-text pull-right"><a href="/admin">Admin</a></p>
