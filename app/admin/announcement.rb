@@ -21,6 +21,8 @@ ActiveAdmin.register Announcement do
       f.input :title
       f.input :content
     end
+
+    f.actions
   end
   
 end
