@@ -1,50 +1,48 @@
 <% content_for :title, @course.title %>
 <%= render 'shared/header' %>
 <%= render 'shared/nav' %>
-<div id="container">
-	<div class="row">
-    	<div class="col-lg-6">
-        	<h2>Course Info</h2>
-	    	<table class="table">
-	    		<tr>
-	    			<th class="col-xs-2">Instructor</th>
-	    			<td class="col-xs-4"><%= link_to @instructor.first + " " + @instructor.last, controller: 'home' %></td>
-	    		</tr>
-	    		<tr>
-	    			<th>Email</th>
-	    			<td><a href="mailto:jkeller@psu.edu">jkeller@psu.edu</a></td>
-	    		</tr>
-	    		<tr>
-	    			<th>Office</th>
-	    			<td>Olmstead 238</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Office Hours</th>
-	    			<td>MWF: 2-3pm</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Venue</th>
-	    			<td>Olmstead 252</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Time</th>
-	    			<td>MWF: 9-10am</td>
-	    		</tr>
-	    	</table>
-	    </div>
-	    <div class="col-lg-6">
-	    	<h2>Announcements</h2>
-	    	<% @course.announcements.each do |announcement| %>
-          	<div id="panels" class="panel panel-primary">
-          		<div class="panel-heading">
-          			<%= announcement.date.to_formatted_s(:long_ordinal)%>
-	          	</div>
-
- 		        <p><strong><%= announcement.title %></strong><br/><%= announcement.content %></p>
-          	</div>
-          	<% end %>
-      	</div>
+<div class="row">
+	<div class="col-lg-6">
+    	<h2>Course Info</h2>
+    	<table class="table">
+    		<tr>
+    			<th class="col-xs-2">Instructor</th>
+    			<td class="col-xs-4"><%= link_to @instructor.first + " " + @instructor.last, controller: 'home' %></td>
+    		</tr>
+    		<tr>
+    			<th>Email</th>
+    			<td><a href="mailto:jkeller@psu.edu">jkeller@psu.edu</a></td>
+    		</tr>
+    		<tr>
+    			<th>Office</th>
+    			<td>Olmstead 238</td>
+    		</tr>
+    		<tr>
+    			<th>Office Hours</th>
+    			<td>MWF: 2-3pm</td>
+    		</tr>
+    		<tr>
+    			<th>Venue</th>
+    			<td>Olmstead 252</td>
+    		</tr>
+    		<tr>
+    			<th>Time</th>
+    			<td>MWF: 9-10am</td>
+    		</tr>
+    	</table>
     </div>
+    <div class="col-lg-6">
+    	<h2>Announcements</h2>
+    	<% @course.announcements.each do |announcement| %>
+      	<div id="panels" class="panel panel-primary">
+      		<div class="panel-heading">
+      			<%= announcement.date.to_formatted_s(:long_ordinal)%>
+          	</div>
+
+		        <p><strong><%= announcement.title %></strong><br/><%= announcement.content %></p>
+      	</div>
+      	<% end %>
+  	</div>
 </div>
 
 

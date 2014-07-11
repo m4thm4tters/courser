@@ -1,5 +1,4 @@
 <div class="navbar navbar-default" role="navigation">
-  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -10,10 +9,9 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'Home', controller: 'home' %></li>
-        <li><%= link_to 'Teaching', controller: 'courses' %></li>
+        <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', controller: 'home' %></li>
+        <li class="<%= 'active' if current_page?(courses_path) %>"><%= link_to 'Teaching', controller: 'courses' %></li>
       </ul>
       <p class="navbar-text pull-right"><a href="/admin">Admin</a></p>
     </div><!--/.nav-collapse -->
-  </div>
 </div>

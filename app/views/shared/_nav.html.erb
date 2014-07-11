@@ -1,5 +1,4 @@
 <div class="navbar navbar-default" role="navigation">
-  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -10,13 +9,12 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        	<li><%= link_to 'Home', course_path(@course) %></li>
-        	<li><%= link_to 'Assignments', assignments_path(:id => @course.id) %></li>
-        	<li><%= link_to 'Calendar', events_path(:id => @course.id) %></li>
-        	<li><%= link_to 'Lecture Notes', lectures_path(:id => @course.id) %></li>
+        	<li class="<%= 'active' if current_page?(course_path(@course)) %>"><%= link_to 'Home', course_path(@course) %></li>
+        	<li class="<%= 'active' if current_page?(assignments_path) %>"><%= link_to 'Assignments', assignments_path(:id => @course.id) %></li>
+        	<li class="<%= 'active' if current_page?(events_path) %>"><%= link_to 'Calendar', events_path(:id => @course.id) %></li>
+        	<li class="<%= 'active' if current_page?(lectures_path) %>"><%= link_to 'Lecture Notes', lectures_path(:id => @course.id) %></li>
         	<li><a href='#'>Course Documents</a></li>
       </ul>
       <p class="navbar-text pull-right"><a href="/admin">Admin</a></p>
     </div><!--/.nav-collapse -->
-  </div>
 </div>

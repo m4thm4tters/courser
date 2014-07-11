@@ -53,6 +53,7 @@ $colHighlight   : #fdfbff;
 	.navbar-nav {
 		> li {
 			> a {
+				text-decoration: none;
 				color: $colDefault;
 				&:hover,  &:focus {
 					color: $colHighlight; }}}

@@ -1,10 +1,12 @@
 <div class="page-header">
 	<div class="container">
- 		<div class="col-lg-3">
-	 		<a class="brand" href="http://www.psu.edu"><%= image_tag("logo.jpg") %></a>
+		<div class="row">
+	 		<div class="col-lg-3">
+		 		<a class="brand" href="http://www.hbg.psu.edu"><%= image_tag("logo.jpg") %></a>
+		 	</div>
+	 		<div class="col-xs-9">
+	 			<h1><%= @course.title %> <small><%= @course.semester %> <%= @course.year %></small></h1>
+	 		</div>
 	 	</div>
- 		<div class="col-xs-9">
- 			<h1><%= @course.title %> <small><%= @course.semester %> <%= @course.year %></small></h1>
- 		</div>
  	</div>
 </div>
